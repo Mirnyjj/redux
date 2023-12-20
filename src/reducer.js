@@ -1,4 +1,11 @@
-export const initialState = {};
+import { arrButton } from "./constArr/arrButton";
+
+export const initialState = {
+        draw: false,
+        isVictory: false,
+        player: 'X',
+        buttonState: arrButton,
+};
 export const appReducer = (state = initialState, action) => {
     const {type, payload} = action;
     console.log(state)

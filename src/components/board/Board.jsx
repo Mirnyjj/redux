@@ -1,5 +1,3 @@
-
-import { useState } from "react";
 import { store } from "../../store"
 import { check, winCheck } from "../../utils/winningСheck";
 import './board.css'
@@ -15,7 +13,6 @@ export const BoardLayout = () => {
 
     const clickButton = (el) => {
     const { draw, isVictory, player, buttonState} = store.getState();
-
     
         if (draw || isVictory) return;
 
