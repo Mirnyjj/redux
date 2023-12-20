@@ -1,13 +1,15 @@
 import './App.css';
-import { Board } from './components/board/board';
+import { BoardLayout } from './components/board/board';
 import { Inform } from './components/inform/Inform';
 
+// eslint-disable-next-line react/prop-types
 export const AppLayout = ({ props }) => {
-    const { player, isVictory, buttonState, drow, clickButton, reset } = props;
+    // eslint-disable-next-line react/prop-types
+    const { reset} = props;
     return (
         <div>
-            <Inform player={player} isVictory={isVictory} drow={drow} />
-            <Board buttonState={buttonState} onClick={clickButton} />
+            <Inform />
+            <BoardLayout/>
             <button className='StyleButton' onClick={reset}>Начать заново</button>
         </div>
     )
